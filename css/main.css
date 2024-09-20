@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Assistant:wght@200..800&display=swap');
+
+/* Reseteo del Navegador */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-font: "Assistant", sans-serif;
+    --secondary-font: "Anton", sans-serif;
+    --primary-color: #981c25;
+    --secondary-color: #ee4552;
+    --third-color: #fecace;
+    --background-color: #d3cce3;
+    --black: black;
+    --white: #ffff;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10vh;
+    align-items: center;
+    background-color: var(--primary-color);
+    height: 10vh;
+    font-family: var(--primary-font);
+    border-radius: 0px 0px 10px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.siman-image {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    padding-left: 12px;
+}
+
+.options-navbar {
+    display: flex;
+    padding-right: 5rem;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.options-navbar .text{
+    font-weight: 600;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.start {
+    background: #D3CCE3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #E9E4F0, #D3CCE3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #E9E4F0, #D3CCE3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.background {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 40vh;
+}
+
+.siman-background {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.slogan {
+    text-align: center;
+    font-family: var(--secondary-font);
+    font-size: 50px;
+    color: var(--secondary-color);
+    height: 50vh;
+}
+
+.container {
+    font-family: var(--secondary-font);
+    padding: 1rem 6rem 0rem 6rem;
+    background-color: var(--background-color);
+}
+
+.title {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.container-clothes {
+    display: grid;
+    grid-template-areas:
+        "image-2 image-3 image-1"
+        "image-4 image-5 image-1"
+    ;
+    gap: 1rem;
+}
+
+.image-c{
+    position: relative;
+    font-family: var(--primary-font);
+    font-size: 23px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.image-c img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid var(--black);
+}
+
+.image-c img:hover{
+    opacity: 50%;
+    transition: opacity 0.3s ease;
+}
+
+.image-c .text-1{
+    position: absolute;
+    top: 94%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.image-c .text{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.image-c:nth-child(1) {
+    grid-area: image-1;
+}
+
+.image-c:nth-child(2)  {
+    grid-area: image-2;
+}
+
+.image-c:nth-child(3)  {
+    grid-area: image-3;
+}
+
+.image-c:nth-child(4)  {
+    grid-area: image-4;
+}
+
+.image-c:nth-child(5)  {
+    grid-area: image-5;
+}
+
+.container-accesory img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid var(--black);
+}
+
+.container-accesory img:hover{
+    opacity: 50%;
+    transition: opacity 0.3s ease;
+}
+
+.text-accesory {
+    position: absolute;
+    top: 90%;
+    left: 25%;
+    transform: translate(-50%,-50%);
+    font-family: var(--primary-font);
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--white);
+}
+
+.container-accesory{
+    margin-top: 2rem;
+    position: relative;
+} 
+
+.container-cellphones{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.images-cellphone{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.images-cellphone img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.card-cellphone{
+    background-color: var(--white);
+    border-radius: 12px;
+    padding-bottom: 1rem;
+}
+
+.body-card-phone{
+    font-family: var(--primary-font);
+}
+
+.body-card-phone h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.text-price{
+    padding-left: 1rem;
+    font-size: large;
+    font-weight: bold;
+}
+
+.text-price .price{
+    color: #981c25;
+}
+
+.text-price .desc-cellphone{
+    color: var(--black);
+    background-color: var(--secondary-color);
+    padding: 3px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.text-price .price-after{
+    font-style:initial;
+    text-decoration: line-through;
+    color: rgb(128, 128, 128);
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 5vh;
+}
+
+.buttons button{
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 90%;
+    padding: 3px 2rem 3px 2rem;
+    background-color: var(--primary-color);
+    color:var(--white)
+}
+
+.buttons button:hover{
+    background-color: var(--secondary-color);
+    transition: background-color 0.5s ease;
+}
+
+.container-footer{
+    background-color: var(--third-color);
+    margin-top: 1rem;
+    padding: 2rem;
+    text-align: center;
+    font-family: var(--primary-font);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-section:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-section:nth-child(3){
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.img-social-media{
+    display: flex;
+    gap: 1rem;
+}
+
+/* Mediaquery for smartphone */
+@media (min-width: 320px) and (max-width: 480px){
+    
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        height: 10vh;
+        border-radius: 0px 0px 5px 5px;
+        z-index: 1;
+    }
+    
+    .siman-image {
+        width: 90%;
+        height: 100%;
+    }
+
+    .options-navbar {
+        display: flex;
+        padding-right: 1rem;
+        justify-content: flex-end;
+        gap: 2rem;
+    }
+    
+    .options-navbar .text{
+        display: flex;
+        padding-right: 0px;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .container {
+        font-family: var(--secondary-font);
+        padding: 2px 10px 0px 10px;
+        background-color: var(--background-color);
+    }
+
+    .slogan {
+        font-size: 20px;
+        height: 50vh;
+    }
+
+    .siman-background {
+        width: 70%;
+        height: 60%;
+        object-fit: contain;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 100;
+    }
+
+    .container-clothes {
+        display: grid;
+        grid-template-areas:
+            "image-2 image-1"
+            "image-3 image-1"
+            "image-4 image-5"
+        ;
+        gap: 1rem;
+    }
+
+    .image-c img {
+        border: 2px solid var(--black);
+    }
+    
+    .image-c{
+        position: relative;
+        font-family: var(--primary-font);
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--white);
+    }
+
+    .container-accesory img{
+        height: 100%;
+        width: 100%;
+        object-fit:cover;
+        border-radius: 12px;
+        border: 2px solid var(--black);
+    }
+    
+    .text-accesory {
+        position: absolute;
+        top: 85%;
+        left: 25%;
+        transform: translate(-50%,-50%);
+        font-family: var(--primary-font);
+        font-size: 10px;
+        font-weight: 500;
+        color: var(--white);
+    }
+    
+    .container-accesory{
+        margin-top: 2rem;
+        position: relative;
+        margin-bottom: 2rem;
+    } 
+    
+
+    .container-cellphones{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .images-cellphone{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1px;
+    }
+    
+    .images-cellphone img{
+        width: 75%;
+        height: 75%;
+        object-fit: cover;
+    }
+    
+    .card-cellphone{
+        background-color: var(--white);
+        border-radius: 12px;
+        padding-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .body-card-phone{
+        font-family: var(--primary-font);
+        font-size: 12px;
+    }
+    
+    .body-card-phone h2{
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .text-price{
+        padding-left: 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    
+    .text-price .price{
+        color: #981c25;
+    }
+    
+    .text-price .desc-cellphone{
+        color: var(--black);
+        background-color: var(--secondary-color);
+        padding: 3px;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .text-price .price-after{
+        font-style:initial;
+        text-decoration: line-through;
+        color: rgb(128, 128, 128);
+    }
+    
+    .buttons{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 5vh;
+    }
+    
+    .buttons button{
+        font-family: var(--primary-font);
+        font-weight: 500;
+        font-size: 90%;
+        padding: 3px 2rem 3px 2rem;
+        background-color: var(--primary-color);
+        color:var(--white)
+    }
+
+    .container-footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 13px;
+        padding: 1rem;
+    }
+
+    .footer-section:nth-child(1) img{
+        height: 50%;
+        width: 60%;
+        object-fit: cover;
+    }
+    .footer-section:nth-child(3){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-weight: bold;
+        gap: 5px;
+    }
+
+    .img-social-media{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .img-social-media img{
+        width: 20%;
+        height: 50%;
+        object-fit: cover;
+    }
+}
